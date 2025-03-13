@@ -1,0 +1,16 @@
+:root
+{
+    background-color: black;
+    background-image: url("images/dragon.png");
+    background-repeat: repeat;
+    color: red;
+}
+@font-face
+{
+    font-family: coolfont;
+    src: url("fonts/coolfont.woff2")
+}
+h1
+{
+    font-family: coolfont;
+}
