@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Application</title>
+    </head>
+    <body>
+        <h1>Dragon Sweeper</h1>
+        <nav>
+            <ul>
+                <li><a href="#over">Overview</a></li>
+                <li><a href="#howto">How To Play</a></li>
+                <li><a href="#ref">Reference Guide</a></li>
+            </ul>
+        </nav>
+        <iframe scrolling="no" style="width:92vh; height:80vh; margin:auto; display:block;" src="dragonsweeper.html"></iframe>
+        <section id="over">
+            <h2>Overview</h2>
+            <p>Dragon Sweeper is a fresh take on a classic game from the 90s: Minesweeper. In Minesweeper, the goal of the game was to safely mark all mines on a grid by process of elimination. In Dragon Sweeper, the goal of the game is to find enough treasure to make you strong enough to face the dragon at the center of the map. However, there is much more to worry about than mines along the way: monsters and traps that guard the treasure you need to get stronger. Through a cycle of sacrificing health points for treasure that eventually allows you to heal and get stronger than before, you slowly gain the strength you need to eventually overcome the dragon!</p>
+            <div class="linkreturn"><a href="#">Return To Top</a></div>
+        </section>
+        <section id="howto">
+            <h2>How To Play</h2>
+            <ol>
+                <li>The safest move to start is to click on the <img src="images/crystalball.png" alt="crystal ball">, which will reveal a small area of the map for you.</li>
+                <li>Check how many hearts you have (5 to start), and click on a revealed enemy with a power level equal to or less than that.
+                    <section class="side">
+                        <h3>Sidenote</h3>
+                        <p>You might notice other spaces that don't display a power level, such as <img src="images/wall.png" alt="wall"> or <img src="images/scrollheart.png" alt="heart scroll">. <strong>Ignore them for now.</strong></p>
+                    </section>
+                </li>
+                <li>Upon defeat, most enemies simply drop treasure in an amount equal to their power level. Click again on the square to pick up the treasure, which you will see is stored in a gauge below your heart bar at the bottom of the screen.</li>
+                <li>Repeat steps 2 and 3 as many times as possible. You should now have enough treasure to level up! Click on the <img src="images/levelup.png" alt="level up"> icon and observe that 2 important things happen:
+                    <ul>
+                        <li>All of your heart points are refilled</li>
+                        <li>You progress toward growing a new heart</li>
+                    </ul>
+                    <section class="side">
+                        <h3>Sidenote</h3>
+                        <p>For peak efficiency, try to <strong>never level up unless your hearts are completely depleted</strong>. If you ever can't find a monster to spend your hearts on without dying, use them toward breaking a <img src="images/wall.png" alt="wall">. They take 3 hits before the crumble, revealing a single treasure. Better than nothing!</p>
+                    </section>
+                </li>
+                <li>Repeat step 4 until you run out of revealed monsters or you don't have enough treasure to level up.
+                    <br>
+                    In this situation, you basically have 2 options:
+                    <ul>
+                        <li>Use a revealed <img src="images/scrollheart.png" alt="heart scroll"> to replenish your health (sort of like leveling up, but without progressing toward a new heart)</li>
+                        <li>Venture into the unknown by clicking on an unrevealed space.
+                            <br>
+                            <strong>But wait! This is the step that can get you killed!</strong> You'll want to make an educated guess on what space would be safest before you dive in.
+                            <br>
+                            In order guess what monsters or treasure await in each unexplored space, we can look at the numbers shown in any surrounding blank spaces. This number is the total power level of threats surrounding that blank space. Take the example below:
+                            <br>
+                            <img src="images/example1.png" alt="Example 1">
+                            <br>
+                            Notice how one of our blank spaces is displaying "1". This means of the 3 unrevealed spaces surrounding that space (including diagonals), the sum of their threat levels is only 1. If we only had 1 heart left at this point, we could confidently click on any of those 3 spaces and know that the worst that could happen is we end up spending our last heart fighting a <img src="images/rat.png" alt="rat">. One of the best things that could happen is we find a treasure chest! In fact, we know we can click on all 3 spaces with no risk of death.
+                            <br>
+                            Now let's look at the "9" space. 9 seems pretty scary if we're only sitting at 1 heart. But notice that this "9" is taking into account the <img src="images/skeleton.png" alt="3"> and <img src="images/demon.png" alt="4"> that were already revealed by the crystal ball at the start. That means that of the 2 remaining unexplored spaces around the "9", the sum of their threat levels is 2. In other words, if we were to click on one of those spacecs, it's guaranteed to have a threat level of either 0, 1, or 2. 2 would kill us, but 0 or 1 could lead us to more treasure!
+                        </li>
+                    </ul>
+                </li>
+                <li>Continue repeating the previous steps until you either run out of luck or eventually level up enough to fight the dragon with 13 hearts!</li>
+            </ol>
+            <div class="linkreturn"><a href="#">Return To Top</a></div>
+        </section>
+        <section id="ref">
+            <h2>Reference Guide</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Icon</th>
+                        <th>Power Level</th>
+                        <th>Quantity</th>
+                        <th>Special Placement Rules</th>
+                        <th>Special Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><img src="images/rat.png" alt="rat"></th>
+                        <td>1</td>
+                        <td>13</td>
+                        <td>Always facing the <img src="images/ratking.png" alt="Rat King">, left, right, or vertical</td>
+                        <td>
+                            Killing one disqualifies you from getting the Rat Pacifist achievement
+                            <br>
+                            All are revealed by killing the <img src="images/ratking.png" alt="Rat King">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/bat.png" alt="rat"></th>
+                        <td>2</td>
+                        <td>12</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/skeleton.png" alt="rat"></th>
+                        <td>3</td>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/demon.png" alt="demon"></th>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>Always exist in pairs, facing each other left, right, up, or down</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/slime.png" alt="slime"></th>
+                        <td>5</td>
+                        <td>8</td>
+                        <td></td>
+                        <td>All are revealed by killing the <img src="images/slimewitch.png" alt="Slime Witch"></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/minotaur.png" alt="minotaur"></th>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>Always exist to the left or right (including diagonal) of a <img src="images/chest.png" alt="treasure chest">, facing the opposite direction, unless the chest is opened.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/demon.png" alt="demon"></th>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>Only 1 exists per quadrant, never directly to the left, right, above, or below the <img src="images/dragon.png" alt="dragon"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/superslime.png" alt="super slime"></th>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>Exist only surrouding the <img src="images/slimewitch.png" alt="Slime Witch"> at the edge of the map</td>
+                        <td>All are revealed by killing the <img src="images/slimewitch.png" alt="Slime Witch"></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/romeo.png" alt="lover"></th>
+                        <td>9</td>
+                        <td>2</td>
+                        <td>They always mirror their location on the map left or right, facing each other.</td>
+                        <td>Drops a <img src="images/scrollheart.png" alt="heart scroll"> upon death</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/minewizard.png" alt="mine wizard"></th>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>Only exists in one of the 4 corners of the map</td>
+                        <td>All <img src="images/mine.png" alt="mines"> are disarmed and revealed upon death</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/mimic.png" alt="mimic"></th>
+                        <td>11</td>
+                        <td>1</td>
+                        <td>Disguized as a chest</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/dragon.png" alt="dragon"></th>
+                        <td>13</td>
+                        <td>1</td>
+                        <td>Always revealed in the center of the map</td>
+                        <td>Ends the game immediately with a win</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/egg.png" alt="dragon egg"></th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>Always exists next to the <img src="images/dragon.png" alt="dragon"> (including diagonals)</td>
+                        <td>Drops 3 treasure</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/wall.png" alt="wall"></th>
+                        <td>3*</td>
+                        <td>6</td>
+                        <td>Always in pairs, left, right, above, or below each other, never touching another pair</td>
+                        <td>
+                            Does not deal damage upon revealing, removes only 1 heart at a time, and can never deal lethal damage
+                            <br>
+                            Drops 1 treasure
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/chest.png" alt="treasure chest"></th>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>Always exist to the left or right (including diagonal) of a <img src="images/minotaur.png" alt="minotaur"></td>
+                        <td>Drops either 5 treasure or a <img src="images/scrollheart.png" alt="heart scroll"></td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/gnome.png" alt="gnome"></th>
+                        <td>0</td>
+                        <td>1*</td>
+                        <td>Always exists next to a <img src="images/scrollheart.png" alt="heart scroll"> (including diagonals), but teleports from scroll to scroll when found until there is no empty space to teleport to </td>
+                        <td>Drops 9(?) treasure</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/scrollheart.png" alt="heart scroll"></th>
+                        <td>0</td>
+                        <td>5</td>
+                        <td></td>
+                        <td>Refill all of your hearts</td>
+                    </tr>
+                    <tr>
+                        <th><img src="images/scrollball.png" alt="crystal ball scroll"></th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td></td>
+                        <td>Reveals a random unexplored area of the map</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <div class="linkreturn"><a href="#">Return To Top</a></div>
+        </section>
+    </body>
+</html>
