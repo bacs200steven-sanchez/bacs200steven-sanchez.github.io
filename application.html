@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>Dragon Sweeper</h1>
+        <h2 id="credit">by Daniel Benmergui</h2>
         <nav>
             <ul>
                 <li><a href="#over">Overview</a></li>
@@ -23,24 +24,25 @@
         <section id="howto">
             <h2>How To Play</h2>
             <ol>
-                <li>The safest move to start is to click on the <img src="images/crystalball.png" alt="crystal ball">, which will reveal a small area of the map for you.</li>
-                <li>Check how many hearts you have (5 to start), and click on a revealed enemy with a power level equal to or less than that.
+                <li>The safest move to start with is to click on the <img src="images/crystalball.png" alt="crystal ball">, which will reveal a small area of the map for you.</li>
+                <li>
                     <section class="side">
                         <h3>Sidenote</h3>
                         <p>You might notice other spaces that don't display a power level, such as <img src="images/wall.png" alt="wall"> or <img src="images/scrollheart.png" alt="heart scroll">. <strong>Ignore them for now.</strong></p>
                     </section>
+                    Check how many hearts you have (5 to start), and click on a revealed enemy with a power level equal to or less than that.
                 </li>
                 <li>Upon defeat, most enemies simply drop treasure in an amount equal to their power level. Click again on the square to pick up the treasure, which you will see is stored in a gauge below your heart bar at the bottom of the screen.</li>
-                <li>Repeat steps 2 and 3 as many times as possible. You should now have enough treasure to level up! Click on the <img src="images/levelup.png" alt="level up"> icon and observe that 2 important things happen:
-                    <ul>
-                        <li>All of your heart points are refilled</li>
-                        <li>You progress toward growing a new heart</li>
-                    </ul>
+                <li>
                     <section class="side">
                         <h3>Sidenote</h3>
                         <p>For peak efficiency, try to <strong>never level up unless your hearts are completely depleted</strong>. If you ever can't find a monster to spend your hearts on without dying, use them toward breaking a <img src="images/wall.png" alt="wall">. They take 3 hits before the crumble, revealing a single treasure. Better than nothing!</p>
                     </section>
-                    
+                    Repeat steps 2 and 3 as many times as possible. You should now have enough treasure to level up! Click on the <img src="images/levelup.png" alt="level up"> icon and observe that 2 important things happen:
+                    <ul>
+                        <li>All of your heart points are refilled</li>
+                        <li>You progress toward growing a new heart</li>
+                    </ul>
                 </li>
                 <li>Repeat step 4 until you run out of revealed monsters or you don't have enough treasure to level up.
                     <br><br>
@@ -143,7 +145,11 @@
                         <td>9</td>
                         <td>2</td>
                         <td>They always mirror their location on the map left or right, facing each other.</td>
-                        <td>Drops a <img src="images/scrollheart.png" alt="heart scroll"> upon death</td>
+                        <td>
+                            Drops a <img src="images/scrollheart.png" alt="heart scroll"> upon death
+                            <br>
+                            Killing one disqualifies you from getting the Lovers Survive achievement
+                        </td>
                     </tr>
                     <tr>
                         <th><img src="images/minewizard.png" alt="mine wizard"></th>
@@ -171,7 +177,11 @@
                         <td>0</td>
                         <td>1</td>
                         <td>Always exists next to the <img src="images/dragon.png" alt="dragon"> (including diagonals)</td>
-                        <td>Drops 3 treasure</td>
+                        <td>
+                            Drops 3 treasure
+                            <br>
+                            Killing it disqualifies you from getting the Future Generation achievement
+                        </td>
                     </tr>
                     <tr>
                         <th><img src="images/ratking.png" alt="rat king"></th>
@@ -189,13 +199,13 @@
                     </tr>
                     <tr>
                         <th><img src="images/wall.png" alt="wall"></th>
-                        <td>3*</td>
+                        <td>0*</td>
                         <td>6</td>
                         <td>Always in pairs, left, right, above, or below each other, never touching another pair</td>
                         <td>
-                            Does not deal damage upon revealing, removes only 1 heart at a time, and can never deal lethal damage
+                            Does not deal damage upon revealing, but upon clicking it will remove 1 heart at a time, and can never deal lethal damage
                             <br>
-                            Drops 1 treasure
+                            After 3 clicks, it will break and drop 1 treasure
                         </td>
                     </tr>
                     <tr>
@@ -210,7 +220,7 @@
                         <td>0</td>
                         <td>1*</td>
                         <td>Always exists next to a <img src="images/scrollheart.png" alt="heart scroll"> (including diagonals), but teleports from scroll to scroll when found until there is no empty space to teleport to </td>
-                        <td>Drops 9(?) treasure</td>
+                        <td>Drops 9 treasure</td>
                     </tr>
                     <tr>
                         <th><img src="images/scrollheart.png" alt="heart scroll"></th>
