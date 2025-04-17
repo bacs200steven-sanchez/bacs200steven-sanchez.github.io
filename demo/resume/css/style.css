@@ -1,0 +1,17 @@
+@font-face
+{
+    font-family: 'heading';
+    src: url(fonts/DMSerifDisplay.ttf)
+}
+h1
+{
+    font-family: 'heading';
+}
+table
+{
+    border: 5px black solid;
+}
+td, th
+{
+    border: 2px black solid;
+}
